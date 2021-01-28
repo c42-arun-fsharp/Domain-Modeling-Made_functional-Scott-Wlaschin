@@ -6,7 +6,6 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="README.md" />
     <Compile Include="Result.fs" />
     <Compile Include="Common.SimpleTypes.fs" />
     <Compile Include="Common.CompoundTypes.fs" />
@@ -21,8 +20,7 @@
     </Content>
     <None Include="paket.references" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard1.6' ">
-    <Reference Include="System.Runtime" />
-  </ItemGroup>  
-  <Import Project="..\..\.paket\Paket.Restore.targets" />
+  <ItemGroup> 
+	<Reference Include="netstandard" /> 
+  </ItemGroup>
 </Project>
